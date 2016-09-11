@@ -19,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -45,10 +46,24 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("nine");
         words.add("ten");
 
+        words.add("one");
+        words.add("two");
+        words.add("three");
+        words.add("four");
+        words.add("five");
+        words.add("six");
+        words.add("seven");
+        words.add("eight");
+        words.add("nine");
+        words.add("ten");
+
         ArrayAdapter<String> itemsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, words);
 
-        ListView listView = (ListView) findViewById(R.id.rootView);
-        listView.setAdapter(itemsAdapter);
+        //ListView listView = (ListView) findViewById(R.id.rootView);
+        //listView.setAdapter(itemsAdapter);
+
+        GridView gridView = (GridView) findViewById(R.id.rootView);
+        gridView.setAdapter(itemsAdapter);
 
     }
 }
